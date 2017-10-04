@@ -86,4 +86,6 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-		<div class="container content-wrapper">
+	<div class="content-wrapper">
+		<!-- Removing this container class to get a full width menu on the page.  <div class="container content-wrapper"> --!>
+
