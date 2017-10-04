@@ -71,3 +71,7 @@
 .erm_product_price li { display: inline-block; }
 .erm_product_price .price { display: inline-block; min-width: 50px; font-weight: bold; text-align: left; padding-left: 10px; padding-right: 15px; }
 
+/*This may only apply to Oblique theme, spread our content out a little further on the page*/
+.page .hentry {
+    padding: 20px !important;
+}
