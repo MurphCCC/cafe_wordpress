@@ -107,7 +107,7 @@ function erm_setup_post_types() {
         'all_items' 		=> __( 'All Weekly Menus', 'erm' ),
         'view_item' 		=> __( 'View Weekly Menu', 'erm' ),
         'search_items' 		=> __( 'Search Weekly Menus', 'erm' ),
-        'not_found' 		=> __( 'No Weekly Menu found', 'erm' ),
+        'not_found' 		=> __( 'No Weekly menus have been set up yet', 'erm' ),
         'not_found_in_trash'=> __( 'No Weekly Menus found in Trash', 'erm' ),
         'parent_item_colon' => '',
         'menu_name' 		=> __( 'Rest. Menus Week', 'erm' )

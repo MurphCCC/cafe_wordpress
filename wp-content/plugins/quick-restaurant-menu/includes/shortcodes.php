@@ -20,6 +20,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /*
  [erm_menu id=319 thumb=no]
  */
+
+function menu_display_salads() {
+
+        $html = '[erm_menu id=39]';
+        return $html;
+
+}
+add_shortcode( '[salads]', 'menu_display_salads' );
+
 function erm_shortcode_menu( $atts, $content = null ) {
 
     global $post;
@@ -122,3 +131,4 @@ function erm_shortcode_menu_week( $atts, $content = null ){
     return '';
 }
 add_shortcode( 'erm_menu_week', 'erm_shortcode_menu_week' );
+

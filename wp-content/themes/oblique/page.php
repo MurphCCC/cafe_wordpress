@@ -8,6 +8,7 @@
  * different template.
  *
  * @package Oblique
+ * Template Name: Full Page
  */
 
 get_header(); ?>

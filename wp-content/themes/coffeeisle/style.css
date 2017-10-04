@@ -2364,3 +2364,6 @@ div.alt-shop-blog-small {
 		margin: 0;
 	}
 }
+.container {
+    width: 95% !important;
+}

@@ -15,6 +15,7 @@ function oblique_svg_1() {
 			  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"/>
 			  <path d="m 898.41609,-33.21176 0.01,0 -0.005,-0.009 -0.005,0.009 z"/>
 			  <path d="m 1925,0 0,150 -1925,0"/>
+                          <line x1="1950" y1="0" x2="0" y2="150" width="100%" height="50" class="top single_post_bottom_svg"></line>
 		</svg>
 	';
 }
