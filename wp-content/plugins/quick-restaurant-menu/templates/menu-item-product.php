@@ -1,5 +1,7 @@
 <?php
 $visible = get_post_meta( $item_id, '_erm_visible', true );
+$prices = get_post_meta( $item_id, '_erm_prices', true );
+
 if ( !$visible ) return;
 ?>
 
@@ -29,13 +31,20 @@ if ( !$visible ) return;
     }
     ?>
 
-    <h3 class="erm_product_title"><?php echo $the_post->post_title; ?></h3>
+    <h3 class="erm_product_title"><?php echo $the_post->post_title;?>
+                    <?php foreach( $prices as $price ) {
+                        $p = apply_filters('erm_filter_price', $price['value']);
+                     ?>
+                    
+                    <?php echo $p; ?>
+            <?php } ?>
+    </h3>
 
     <?php
 
     if ( $price_position == 'top' ) {
 
-        include 'menu-item-product-price.php';
+        // include 'menu-item-product-price.php';
         include 'menu-item-product-desc.php';
 
     } else if ( $price_position == 'bottom' ) {
