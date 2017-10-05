@@ -80,9 +80,6 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 		</div>
-		<div class="svg-container header-svg svg-block">
-			<?php oblique_svg_1(); ?>
-		</div>		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
