@@ -6,9 +6,6 @@
  */
 ?>
 
-<div class="svg-container single-post-svg svg-block">
-	<?php oblique_svg_1(); ?>
-</div>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -30,6 +27,3 @@
 		<?php edit_post_link( __( 'Edit', 'oblique' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-<div class="svg-container single-post-svg single-svg-bottom svg-block">
-	<?php do_action( 'oblique_single_post_bottom_svg' ); ?>
-</div>

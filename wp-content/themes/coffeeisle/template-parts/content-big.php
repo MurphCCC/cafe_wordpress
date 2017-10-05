@@ -8,9 +8,6 @@
 ?>
 <div class="col-md-8 alt-shop-blog-large">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="svg-container post-svg svg-block">
-			<?php echo oblique_svg_3(); ?>
-		</div>
 
 		<?php if ( has_post_thumbnail() && ( get_theme_mod( 'index_feat_image' ) != 1 ) ) : ?>
 			<div class="entry-thumb">
@@ -52,10 +49,6 @@
 			</div>
 			<?php do_action( 'oblique_link_to_single' ); ?>
 
-			<div class="svg-container post-bottom-svg svg-block">
-				<?php
-				do_action( 'oblique_post_bottom_svg' );
-				?>
 			</div>
 	</article><!-- #post-## -->
 </div>

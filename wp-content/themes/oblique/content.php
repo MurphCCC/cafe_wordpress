@@ -7,9 +7,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="svg-container post-svg svg-block">
-		<?php echo oblique_svg_3(); ?>
-	</div>	
 
 	<?php if ( has_post_thumbnail() && ( get_theme_mod( 'index_feat_image' ) != 1 ) ) : ?>
 		<div class="entry-thumb">
