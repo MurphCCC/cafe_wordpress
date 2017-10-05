@@ -14,6 +14,7 @@ if ( !isset($menu_post) || empty($menu_post) ) {
         if ( $post->ID != $menu_post->ID ) {
             ?>
                 <h1 class="erm_title"><?php echo $menu_post->post_title; ?></h1>
+                    <br /><br />
 <!--                <div class="erm_desc"><?php echo do_shortcode($menu_post->post_content); ?></div> -->
             <?php
         }
