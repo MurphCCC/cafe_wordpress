@@ -343,10 +343,12 @@ header.page-header h1.page-title {
 }
 
 .page div.entry-content p {
-	margin: 0 0 60px;
-	font-family: "Athiti", sans-serif;
-	font-size: 15px;
-	line-height: 23px;
+        margin: 0 0 40px;
+        font-family: "Athiti", sans-serif;
+        font-size: 15px;
+        line-height: 23px;
+        color: black;
+        font-size: 1.5em;
 }
 
 .page div.entry-content ul {

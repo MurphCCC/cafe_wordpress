@@ -341,7 +341,8 @@ Posts nav
 	padding-left: 30px;
 }
 .widget li {
-	padding: 3px 0;
+/*	padding: 3px 0;*/
+
 }
 
 /* Make sure select elements fit in widgets. */

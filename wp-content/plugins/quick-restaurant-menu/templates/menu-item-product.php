@@ -39,6 +39,7 @@ if ( !$visible ) return;
                     <?php echo $p; ?>
             <?php } ?>
     </h3>
+    <br />
 
     <?php
 
