@@ -26,7 +26,7 @@ function erm_add_menu_meta_box() {
     foreach ( $post_types as $post_type ) {
 
         add_meta_box( 'erm_menu_items', __( 'Menu Items', 'erm' ), 'erm_render_menu_meta_box', $post_type, 'normal', 'high' );
-        add_meta_box( 'erm_footer_item', __( 'Footer Menu', 'erm' ), 'erm_render_footer_meta_box', $post_type, 'normal', 'high' );
+       // add_meta_box( 'erm_footer_item', __( 'Footer Menu', 'erm' ), 'erm_render_footer_meta_box', $post_type, 'normal', 'high' );
         //add_meta_box( 'erm_menu_shortcode', __( 'Shortcode', 'erm' ), 'erm_render_shortcode_meta_box', $post_type, 'side' );
     }
 
