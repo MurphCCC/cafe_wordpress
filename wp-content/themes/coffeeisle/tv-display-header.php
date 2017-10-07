@@ -69,6 +69,7 @@ ul>li.erm_product.no_image:nth-child(odd) {
 ul>li.erm_product.no_image:nth-child(even) {
     margin-bottom: -20px;
 }
+
 </style>
 </head>
 

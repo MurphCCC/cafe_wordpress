@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Alt Shop Template
+ * Template Name: Is this thing on?
  *
  * The template for shop page.
  *
