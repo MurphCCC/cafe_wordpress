@@ -1397,3 +1397,23 @@ add_action( 'oblique_nav_search', 'coffeeisle_search_icon' );
 if ( class_exists( 'WooCommerce' ) ) {
 	require_once get_stylesheet_directory() . '/woocommerce_template/functions.php';
 }
+
+
+/*   Based on info at this link https://markjaquith.wordpress.com/2014/02/19/template_redirect-is-not-for-loading-templates/
+*    Custom function to change the template on the page based on request parameters.  This allows users of the
+*    site to only have to create one page and not worry about the template that they are using.
+*    This way when we call a page from our Raspberry Pi, we only need to add display=tv onto the end of the
+*    request to get the appropriate template.  This saves the user from having to create two seperate pages,
+*    one for we and one for tv.  Also allows us to simply navigation menu.
+*
+*/
+
+add_filter( 'template_include', 'my_callback' );
+ 
+function my_callback( $original_template ) {
+  if ( $_REQUEST['display'] === 'tv' ) {
+    return $_SERVER['DOCUMENT_ROOT'] . '/cafe_wordpress/wp-content/themes/coffeeisle/template-parts/tv-display.php';
+  } else {
+    return $_SERVER['DOCUMENT_ROOT'] . '/cafe_wordpress/wp-content/themes/coffeeisle/template-parts/online-menu.php';
+  }
+}

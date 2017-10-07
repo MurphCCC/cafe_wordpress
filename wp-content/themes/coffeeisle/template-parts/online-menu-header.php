@@ -22,20 +22,20 @@
 <?php wp_head(); ?>
 <style>
 .site-content {
-    /* margin-bottom: 30px; */
     margin-bottom: 30px;
-    #background-image: url(http://192.168.11.177/cafe_wordpress/wp-content/uploads/2017/10/wood-plank-background.jpg);
-    -webkit-clip-path: polygon(0 93%, 101% 100%, 100% 2%, 46% 7%, 0% 0%);
-    clip-path: polygon(0 93%, 101% 100%, 100% 2%, 46% 7%, 0% 0%);
 }
 
 .site-header {
-    #background: url(http://192.168.11.177/cafe_wordpress/wp-content/uploads/2017/10/cropped-m58logo-1-1.jpg) no-repeat;
+    #background: url(/cafe_wordpress/wp-content/uploads/2017/10/cropped-m58logo-1-1.jpg) no-repeat;
     background-position: center top;
     background-attachment: fixed;
     background-size: cover;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 47% 100%, 0 81%);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 47% 100%, 0 81%);
+}
+.page .hentry {
+    -webkit-clip-path: polygon(0 93%, 101% 100%, 100% 2%, 46% 7%, 0% 0%);
+    clip-path: polygon(0 93%, 101% 100%, 100% 2%, 46% 7%, 0% 0%);
 }
 </style>
 </head>

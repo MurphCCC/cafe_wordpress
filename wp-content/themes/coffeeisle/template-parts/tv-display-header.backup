@@ -25,9 +25,9 @@
 <style>
     html {overflow: hidden;}
     header#masthead, path, .svg-container.single-post-svg.svg-block, header.entry-header, .admin-bar .sidebar-toggle {
-        display: none;
+        display: none;    
     }
-
+    
     html {
         margin-top: -17px !important;
     }
@@ -44,7 +44,7 @@
     .page .hentry {
         background: #f8f9fb;
     }
-
+    
     .container {
         width: 100% !important;
     }
@@ -56,7 +56,7 @@
     font-weight: 200px;
     color: #b3b1b1;
     font-size: 1.62em;
-}
+}	
 ul>li.erm_product.no_image:nth-child(odd) {
     background: #f5f5f5;
     /* color: black !important; */
@@ -68,9 +68,6 @@ ul>li.erm_product.no_image:nth-child(odd) {
 }
 ul>li.erm_product.no_image:nth-child(even) {
     margin-bottom: -20px;
-}
-.site-info.container {
-    display: none;
 }
 
 </style>
