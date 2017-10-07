@@ -34,10 +34,14 @@ if ( !$visible ) return;
     <h3 class="erm_product_title"><?php echo $the_post->post_title;?>
                     <?php foreach( $prices as $price ) {
                         $p = apply_filters('erm_filter_price', $price['value']);
-                     ?>
-                    
-                    <?php echo $p; ?>
-            <?php } ?>
+
+                        if (empty($price['value'])) {
+                            echo apply_filters('NULL', $price['value']);
+                        } else {
+                    	echo $p;
+                        }
+                    };
+                    ?>
     </h3>
     <br />
 
