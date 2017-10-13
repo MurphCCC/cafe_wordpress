@@ -26,7 +26,7 @@
 }
 
 .site-header {
-    #background: url(/cafe_wordpress/wp-content/uploads/2017/10/cropped-m58logo-1-1.jpg) no-repeat;
+    background: url('/cafe_wordpress/wp-content/uploads/2017/10/cropped-m58logo-1-1.jpg') no-repeat;
     background-position: center top;
     background-attachment: fixed;
     background-size: cover;
@@ -37,7 +37,53 @@
     -webkit-clip-path: polygon(0 93%, 101% 100%, 100% 2%, 46% 7%, 0% 0%);
     clip-path: polygon(0 93%, 101% 100%, 100% 2%, 46% 7%, 0% 0%);
 }
+/*button.nav:hover {
+    background: #434343;
+}*/
+
+button.nav {
+    background-color: #f8f9fb;
+    border-radius: 10px;
+    font-family: Oswald, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    color: black;
+    padding: 5px;
+}
+
+div.navbar {
+    color: #f8f9fb;
+    text-align: center;
+    padding: 10px;
+    background: rgb(248, 249, 251);
+    width: 100%;
+    position: fixed;
+    height: 5%;
+    z-index: 10000;
+}
+
+.navbar {
+	top: 0px;
+	left: 0px;
+	z-index: 10000;
+}
+
+	a.nav {
+	color: black;
+    font-family: 'Oswald', sans-serif;
+    padding-left: 5em;
+    padding-bottom: .2em;
+	}
+
+	/*Remove top admin bar*/
+div#wpadminbar {
+		display: none !important;
+	}
+}
+
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -45,16 +91,21 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'oblique' ); ?></a>
 
 	<?php $menu_text = get_theme_mod( 'menu_text' ); ?>
-	<div class="sidebar-toggle">
+	<div class="navbar">
 	<?php if ( ! $menu_text || is_customize_preview() ) : ?>
 		<i class="fa fa-bars<?php echo $menu_text && is_customize_preview() ? ' oblique-only-customizer' : ''; ?>"></i>
 	<?php endif; ?>
 	<?php if ( $menu_text || is_customize_preview() ) : ?>
 		<?php echo '<span class="' . ( ! $menu_text && is_customize_preview() ? ' oblique-only-customizer' : '' ) . '">' . esc_html( $menu_text ) . '<span>'; ?>
 		<?php endif; ?>
+		<a class="nav btn-lunch">Lunch and Dinner Menu</a>
+		<a class="nav btn-weekday">Weekday Breakfast Menu</a>
+		<a class="nav btn-weekend">Weekend Breakfast Menu</a>
+		<a class="nav btn-specials">Daily Specials</a>
+
 	</div>
 
-	<div class="top-bar container">
+<!-- 	<div class="top-bar container">
 		<?php if ( has_nav_menu( 'social' ) ) : ?>
 			<nav class="social-navigation clearfix">
 				<?php
@@ -74,7 +125,7 @@
 		<?php if ( ! get_theme_mod( 'search_toggle' ) || is_customize_preview() ) : ?>
 			<div class="header-search<?php echo get_theme_mod( 'search_toggle' ) && is_customize_preview() ? ' oblique-only-customizer' : ''; ?>">
 				<?php get_search_form(); ?>
-			</div>
+			</div> -->
 		<?php endif; ?>
 	</div>
 

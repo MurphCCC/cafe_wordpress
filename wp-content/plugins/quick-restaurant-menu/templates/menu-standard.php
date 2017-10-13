@@ -5,7 +5,7 @@ if ( !isset($menu_post) || empty($menu_post) ) {
 }
 ?>
 
-<div class="erm_menu<?php echo ( $show_thumbnails ? '' : ' no-thumbs' ); ?> <?php echo 'erm_menu-id-'.$menu_post->ID; ?>" id="erm_menu-id-<?php echo $menu_post->ID; ?>">
+<div class="container erm_menu<?php echo ( $show_thumbnails ? '' : ' no-thumbs' ); ?> <?php echo 'erm_menu-id-'.$menu_post->ID; ?>" id="erm_menu-id-<?php echo $menu_post->ID; ?>">
 
     <?php
         // If it's the erm_menu post then we don't show this
@@ -20,9 +20,13 @@ if ( !isset($menu_post) || empty($menu_post) ) {
         }
     //return;
     ?>
-
-
-    <ul class="erm_menu_content">
+<?php
+    if ($post->post_title === 'Lunch Specials') {
+        echo '<ul class="erm_menu_content specials">';
+    } else {
+        echo '<ul class="erm_menu_content">';
+    }
+    ?>
         <?php
 
             // Thumb size
@@ -31,10 +35,10 @@ if ( !isset($menu_post) || empty($menu_post) ) {
 
             // Menu items
             $menu_items = get_post_meta( $post_id, '_erm_menu_items', true );
+
             if ( !empty($menu_items) ) {
 
                 $menu_items = preg_split('/,/', $menu_items);
-
                 foreach ($menu_items as $item_id) {
 
                     // Visible item
@@ -43,6 +47,21 @@ if ( !isset($menu_post) || empty($menu_post) ) {
                     // Get the post item
                     $the_post = get_post($item_id);
                     $type = get_post_meta($item_id, '_erm_type', true);
+                        // Added an if statement to check if we are dealing with a specials menu and if so, spit out a different template.
+                        if ($post->post_title === 'Lunch Specials') {
+                            //If we are dealing with our lunch specials, switch to the appropriate output template for styling purposes.
+
+                    switch ($type) {
+                        case 'section':
+                            include( 'menu-item-section-specials.php' );
+                            break;
+                        case 'product':
+                            include( 'menu-item-product-specials.php' );
+                            break;
+                        default:
+                            break;
+                    }
+                        } else {
 
                     switch ($type) {
                         case 'section':
@@ -54,6 +73,9 @@ if ( !isset($menu_post) || empty($menu_post) ) {
                         default:
                             break;
                     }
+                }
+
+
                 }
             }
 

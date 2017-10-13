@@ -19,6 +19,18 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script>
+	
 
+
+	$("a.btn-lunch").click(function() {
+		window.location.assign('lunch');
+	});
+
+	$("a.btn-weekday").click(function() {
+		window.location.assign('weekday');
+	});
+
+</script>
 </body>
 </html>

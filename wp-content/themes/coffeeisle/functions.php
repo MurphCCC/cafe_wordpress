@@ -1148,7 +1148,7 @@ function oblique_posted_on() {
  * @since 1.0.0
  */
 function coffeeisle_footer_credits() {
-	echo esc_html__( 'Coffeeisle Shop Theme', 'coffeeisle' );
+	echo esc_html__( 'Calvary Chapel Chattanooga', 'CalvaryChatt' );
 	echo '<span class="sep"> | </span>';
 	/* Translators: Copyright message */
 	printf( __('&copy; %s', 'coffeeisle'), esc_html__( 'Copyright 2017', 'coffeeisle') );

@@ -1,3 +1,5 @@
+
+
 /* Menu general */
 .erm_menu:not(.type-erm_menu) { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 .erm_menu:not(.type-erm_menu),
@@ -74,4 +76,64 @@
 /*This may only apply to Oblique theme, spread our content out a little further on the page*/
 .page .hentry {
     padding: 20px !important;
+}
+
+
+.specials {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+li.erm_product.specials-item.no_image {
+    background: #f8f9fb;
+    padding: 5px;
+    width: 600px;
+    /* height: 150px; */
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px dotted black;
+}
+
+
+@media print {
+
+    /* Setting content width, unsetting floats and margins */
+    /* Attention: the classes and IDs vary from theme to theme. Thus, set own classes here */
+    
+    header#masthead, h1, h2, a, footer {
+        display: none;
+    }
+
+    #content,#page {
+    width: 100%; 
+    margin: 0; 
+    float: none;
+    }
+     
+    
+    container {
+        width: 100%;
+    }
+
+    li.erm_product.specials-item.no_image {
+        width: 50%;
+        margin: 0px;
+        border: 0;
+        padding: 5px;
+    }
+
+    .erm_product {
+        margin: 0px;
+    }
+
+    .erm_title {
+        display: none;
+    }
 }
